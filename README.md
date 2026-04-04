@@ -8,10 +8,10 @@ Provisions a secure AWS network with a bastion host for SSH access and a private
 
 ## Tech Stack
 
-- **AWS VPC** — networking (public + private subnets, internet gateway, route tables, security groups)
-- **AWS EC2** — bastion host and private application server
-- **Terraform** — infrastructure as code
-- **Docker** — runs Nginx on the private EC2
+- **AWS VPC**: networking (public + private subnets, internet gateway, route tables, security groups)
+- **AWS EC2**: bastion host and private application server
+- **Terraform**: infrastructure as code
+- **Docker**: runs Nginx on the private EC2
 
 ## Getting Started
 
@@ -34,8 +34,10 @@ ssh -i ~/.ssh/bastion-key ec2-user@<bastion-public-ip>
 ssh -i ~/.ssh/bastion-key ec2-user@<private-ec2-ip>
 ```
 
-Tear down when done:
+## Teardown
 
 ```bash
 terraform destroy
 ```
+
+>Always run 'terraform destroy' when done to avoid AWS charges.
